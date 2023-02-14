@@ -10,7 +10,38 @@
   <body>
     <div class="container">
       <div class="content" id="place">
-        <div class="card" id="first_card"></div>
+        <div class="card" id="first_card">
+          <section>
+            <table>
+              <tr>
+                <td><input type="checkbox" name="A1" />A1</td>
+                <td><input type="checkbox" name="A2" />A2</td>
+                <td><input type="checkbox" name="A3" />A3</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="B1" />B1</td>
+                <td><input type="checkbox" checked="" name="B2" />B2</td>
+                <td><input type="checkbox" name="B3" />B3</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="C1" />C1</td>
+                <td><input type="checkbox" name="C2" />C2</td>
+                <td><input type="checkbox" name="C3" />C3</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" name="D1" />D1</td>
+                <td><input type="checkbox" name="D2" />D2</td>
+                <td><input type="checkbox" name="D3" />D3</td>
+              </tr>
+            </table>
+            <div>Sélectionnez quelques cases à cocher.</div>
+            <button type="button" id="findChecked" autofocus="">Trouver</button>
+            <div id="resultat"></div>
+          </section>
+        </div>
+        <div class="card" id="sec_card"></div>
+        <div class="card" id="third_card"></div>
+        <div class="card" id="fourth_card"></div>
       </div>
     </div>
     <script src="./index.js"></script>
