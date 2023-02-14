@@ -42,9 +42,9 @@ buttonHello.addEventListener("click", displayTextVisible);
 const titleCards = document.querySelectorAll("h1");
 // console.log(titleCards);
 titleCards.forEach((e) => {
-  console.log(e);
+  //   console.log(e);
   e.addEventListener("click", () => {
-    console.log(e.textContent);
+    // console.log(e.textContent);
     if (e.textContent == "Partie 1") {
       let contentNext = document.querySelector("h1:first-child+div");
       let textContentNext = document.querySelectorAll("h1:first-child+div p");
@@ -57,7 +57,7 @@ titleCards.forEach((e) => {
     }
     if (e.textContent == "Partie 2") {
       let contentNext = document.querySelector("h1:last-of-type+div");
-      console.log(contentNext);
+      //   console.log(contentNext);
       let textContentNext = document.querySelectorAll("h1:last-of-type+div p");
       //   console.log(contentNext);
       //   console.log(textContentNext);
@@ -66,9 +66,32 @@ titleCards.forEach((e) => {
         e.style.opacity = "1";
       });
     }
+    const lastTextThirdCard = document.querySelector(
+      "#third_card>p:last-of-type"
+    );
+    const secLastTextThirdCard = document.querySelector(
+      "#third_card>p:nth-last-of-type(2)"
+    );
+    // console.log(secLastTextThirdCard);
+    lastTextThirdCard.style.opacity = "1";
+    secLastTextThirdCard.style.opacity = "1";
   });
   //   e.addEventListener("click", (el) => {
   //     console.log(el);
   //   });
 });
+// !---------------------------------------------------
 // *(b)
+const inputHide = document.querySelector("input[value='Masquer']");
+console.log(inputHide);
+function hideAllDivs() {
+  const allParagraphes = document.querySelectorAll("p");
+  console.log(allParagraphes);
+  for (let i = 0; i < allParagraphes.length - 2; i++) {
+    allParagraphes[i].style.opacity = "0";
+  }
+}
+inputHide.addEventListener("click", hideAllDivs);
+
+// !------------------------------------------------------
+//* (c)
