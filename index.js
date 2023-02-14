@@ -1,15 +1,16 @@
 // console.log("test");
 // *First Card
+function addElementInList() {
+  var selected = document.querySelectorAll("*:checked");
+  var result = "Les cases sélectionnées sont :<br> ";
+  for (var i = 0; i < selected.length; i++) {
+    result += selected[i].name + " ";
+  }
+  document.querySelector("#resultat").innerHTML = result;
+}
 function init() {
   let check = document.querySelector("#findChecked");
-  function addElementInList() {
-    var selected = document.querySelectorAll("*:checked");
-    var result = "Les cases sélectionnées sont :<br> ";
-    for (var i = 0; i < selected.length; i++) {
-      result += selected[i].name + " ";
-    }
-    document.querySelector("#resultat").innerHTML = result;
-  }
+  addElementInList();
   check.addEventListener("click", addElementInList);
 }
 window.addEventListener("load", init);
@@ -34,3 +35,6 @@ function displayTextVisible() {
 buttonHello.addEventListener("click", displayTextVisible);
 //!----------------------------------------------------
 // *Third Card
+// TODO: (a) showHxContent();use selector; display content Div on click
+// TODO: (b) hideAllDivs(); display none all div content
+// TODO: (c) alertTitle();with alert() : display nth() content by title click
