@@ -39,8 +39,37 @@
             <div id="resultat"></div>
           </section>
         </div>
-        <div class="card" id="sec_card"></div>
-        <div class="card" id="third_card"></div>
+        <div class="card" id="sec_card">
+          <button><span>Hello</span></button>
+          <p>Ce texte est maintenant affiché</p>
+        </div>
+        <div class="card" id="third_card">
+          <h1 onClick="showHxContent()">Partie 1</h1>
+
+          <div style="display: none">
+            <p>Mon premier paragraphe</p>
+
+            <p>Mon second paragraphe</p>
+          </div>
+
+          <h1 onClick="showHxContent()">Partie 2</h1>
+
+          <div style="display: none">
+            <p>Mon premier paragraphe</p>
+
+            <p>Mon second paragraphe</p>
+          </div>
+
+          <p>
+            <input type="submit" value="Masquer" onClick="hideAllDivs()" />
+          </p>
+
+          <p>
+            Titre n°: <input type="text" id="title" />
+
+            <input type="submit" value="Afficher" onClick="alertTitle()" />
+          </p>
+        </div>
         <div class="card" id="fourth_card"></div>
       </div>
     </div>
