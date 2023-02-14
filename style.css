@@ -45,7 +45,8 @@ body {
   align-items: center;
   padding: 5px;
 }
-button {
+button,
+input[value="Masquer"] {
   width: 50%;
   height: 35px;
   border: 1px solid transparent;
@@ -54,10 +55,12 @@ button {
   cursor: pointer;
   transition: all 1s ease;
 }
-button:hover {
+button:hover,
+input[value="Masquer"]:hover {
   background-color: hsl(6, 93%, 71%);
   transform: scale(1.1);
 }
 p {
   opacity: 0;
+  width: 100%;
 }

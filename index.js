@@ -111,7 +111,10 @@ function catchTextPart(ele) {
 }
 function displayInputValue() {
   // console.log(title.value);
-  let textContentNext;
+  let textContentNext = "text introuvable";
+  if (title.value - 1 >= titleCards.length) {
+    return alert(textContentNext);
+  }
   if (titleCards[title.value - 1].textContent == "Partie 1") {
     textContentNext = document.querySelectorAll("h1:first-child+div p");
     partOneDisplay();
